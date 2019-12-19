@@ -21,6 +21,8 @@ class ElementsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.dataSource = self
     }
     
     
@@ -36,8 +38,13 @@ extension ElementsVC: UITableViewDataSource {
             fatalError("Could not dequeue to ElementCell")
         }
         let element = elements[indexPath.row]
+        cell.configureCell(element: element)
         return cell
     }
-    
-    
+}
+
+extension ElementsVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        150
+    }
 }

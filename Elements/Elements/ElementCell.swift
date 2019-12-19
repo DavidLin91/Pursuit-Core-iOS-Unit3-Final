@@ -10,15 +10,14 @@ import UIKit
 
 class ElementCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var elementImage: UIImageView!
+    @IBOutlet weak var elementNameLabel: UILabel!
+    @IBOutlet weak var elementSymbolWeightLabel: UILabel!
+    
+    func configureCell(element: AllElements) {
+        elementNameLabel.text = element.name
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
+    
 }
