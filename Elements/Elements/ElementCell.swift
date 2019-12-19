@@ -17,17 +17,12 @@ class ElementCell: UITableViewCell {
     
     
     func configureCell(element: AllElements) {
-        print(element.number)
         let elementInt = String(element.number)
         var newElementInt = ""
-        print(elementInt)
         if elementInt.count == 1 {
-            print("count: \(elementInt)")
             newElementInt += "00" + "\(elementInt)"
-            print("newElementInt: \(newElementInt)")
         } else if elementInt.count == 2 {
             newElementInt += "0" + "\(elementInt)"
-            print("doubledigitelementint \(newElementInt)")
         } else {
             newElementInt += "\(elementInt)"
         }

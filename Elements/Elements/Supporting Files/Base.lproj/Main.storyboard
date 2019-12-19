@@ -234,7 +234,7 @@
                                 <rect key="frame" x="0.0" y="89" width="414" height="805.5"/>
                                 <color key="tintColor" red="0.90229089340000002" green="0.90229089340000002" blue="0.90229089340000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
-                            <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITZ-rP-lor" userLabel="AlphaView">
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITZ-rP-lor" userLabel="AlphaView">
                                 <rect key="frame" x="0.0" y="82" width="414" height="808"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

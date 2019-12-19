@@ -47,7 +47,13 @@ class DetailedElementsVC: UIViewController {
         boilingPoint.text = "Boiling Point: \(elementsDetail?.boil?.description ?? "N/A")"
         discoveredBy.text = "Discovered By: \(elementsDetail?.discovered_by ?? "N/A")"
         
-        fullSizeImage.getImage(with: "http://images-of-elements.com/argon.jpg") { (result) in
+        
+        
+        let elementName = elementsDetail?.name
+        print(elementName!)
+        
+        
+        fullSizeImage.getImage(with: "http://images-of-elements.com/\(elementName?.lowercased() ?? "oxygen").jpg") { (result) in
             switch result {
             case .failure(let appError):
                 print("app error: \(appError)")
