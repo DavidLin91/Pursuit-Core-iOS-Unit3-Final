@@ -15,6 +15,9 @@
 		63DE9CCF23ABCCE30032A666 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE9CCE23ABCCE30032A666 /* FavoritesVC.swift */; };
 		63DE9CD523ABCF400032A666 /* ElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE9CD423ABCF400032A666 /* ElementCell.swift */; };
 		63DE9CD723ABD06C0032A666 /* DetailedElementsVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE9CD623ABD06C0032A666 /* DetailedElementsVCViewController.swift */; };
+		63DE9CD923ABD1080032A666 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE9CD823ABD1080032A666 /* Element.swift */; };
+		63DE9CDB23ABD2F50032A666 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE9CDA23ABD2F50032A666 /* NetworkHelper.swift */; };
+		63DE9CDD23ABD35F0032A666 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE9CDC23ABD35F0032A666 /* AppError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		63DE9CCE23ABCCE30032A666 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		63DE9CD423ABCF400032A666 /* ElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCell.swift; sourceTree = "<group>"; };
 		63DE9CD623ABD06C0032A666 /* DetailedElementsVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedElementsVCViewController.swift; sourceTree = "<group>"; };
+		63DE9CD823ABD1080032A666 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		63DE9CDA23ABD2F50032A666 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		63DE9CDC23ABD35F0032A666 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,8 @@
 		63DE9CD123ABCD160032A666 /* Network Services */ = {
 			isa = PBXGroup;
 			children = (
+				63DE9CDA23ABD2F50032A666 /* NetworkHelper.swift */,
+				63DE9CDC23ABD35F0032A666 /* AppError.swift */,
 			);
 			path = "Network Services";
 			sourceTree = "<group>";
@@ -102,6 +110,7 @@
 		63DE9CD223ABCD310032A666 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				63DE9CD823ABD1080032A666 /* Element.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,8 +193,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63DE9CDB23ABD2F50032A666 /* NetworkHelper.swift in Sources */,
 				5734756421DA90C700FB6177 /* ElementsVC.swift in Sources */,
 				5734756221DA90C700FB6177 /* AppDelegate.swift in Sources */,
+				63DE9CD923ABD1080032A666 /* Element.swift in Sources */,
+				63DE9CDD23ABD35F0032A666 /* AppError.swift in Sources */,
 				63DE9CD523ABCF400032A666 /* ElementCell.swift in Sources */,
 				63DE9CCF23ABCCE30032A666 /* FavoritesVC.swift in Sources */,
 				63DE9CD723ABD06C0032A666 /* DetailedElementsVCViewController.swift in Sources */,
@@ -337,7 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Elements/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,7 +368,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Elements/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
