@@ -355,6 +355,7 @@
                         <outlet property="elementNumber" destination="Pcx-za-wQ4" id="UCf-z2-1rB"/>
                         <outlet property="elementSymbol" destination="JCb-D1-fJR" id="0hf-lx-22Y"/>
                         <outlet property="favoriteButton" destination="2aO-zo-ZbY" id="qls-Xw-pxY"/>
+                        <outlet property="fullSizeImage" destination="01c-Un-w24" id="V5e-h1-HSM"/>
                         <outlet property="meltingPoint" destination="wdC-PI-AKG" id="giw-Ee-3Hl"/>
                     </connections>
                 </viewController>

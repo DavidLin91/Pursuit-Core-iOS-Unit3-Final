@@ -21,6 +21,7 @@ class DetailedElementsVC: UIViewController {
     @IBOutlet weak var elementCellView: UIView!
     @IBOutlet weak var detailedView: UIView!
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var fullSizeImage: UIImageView!
     
     
     override func viewDidLayoutSubviews() {
@@ -45,6 +46,17 @@ class DetailedElementsVC: UIViewController {
         meltingPoint.text = "Melting Point: \(elementsDetail?.melt?.description ?? "N/A")"
         boilingPoint.text = "Boiling Point: \(elementsDetail?.boil?.description ?? "N/A")"
         discoveredBy.text = "Discovered By: \(elementsDetail?.discovered_by ?? "N/A")"
+        
+        fullSizeImage.getImage(with: "http://images-of-elements.com/argon.jpg") { (result) in
+            switch result {
+            case .failure(let appError):
+                print("app error: \(appError)")
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self.fullSizeImage.image = image
+                }
+            }
+        }
     }
     
     

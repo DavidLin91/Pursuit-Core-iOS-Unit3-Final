@@ -14,13 +14,21 @@ class ElementCell: UITableViewCell {
     @IBOutlet weak var elementNameLabel: UILabel!
     @IBOutlet weak var elementSymbolWeightLabel: UILabel!
     
+    
+    
     func configureCell(element: AllElements) {
         elementNameLabel.text = element.name
         elementSymbolWeightLabel.text = "\(element.symbol)(\(element.number)) \(element.atomic_mass?.description ?? "N/A")"
         
-//        elementImage.getImage(with: element., completion: <#T##(Result<UIImage, AppError>) -> ()#>)
-//
+        elementImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/018/s7.JPG") { (result) in
+            switch result {
+            case .failure(let appError):
+                print("app error: \(appError)")
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self.elementImage.image = image
+                }
+            }
+        }
     }
-    
-    
 }

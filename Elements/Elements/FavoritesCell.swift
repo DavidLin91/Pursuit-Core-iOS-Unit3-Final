@@ -13,11 +13,20 @@ class FavoritesCell: UITableViewCell {
     @IBOutlet weak var favoriteElementName: UILabel!
     @IBOutlet weak var favoriteElementLabel: UILabel!
     
-
+    
     func configureCell (element: AllElements) {
         favoriteElementName.text = element.name
         favoriteElementLabel.text = "\(element.symbol)(\(element.number)) \(element.atomic_mass?.description ?? "N/A")"
+        
+        favoriteElementImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/018/s7.JPG") { (result) in
+            switch result {
+            case .failure(let appError):
+                print("app error: \(appError)")
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self.favoriteElementImage.image = image
+                }
+            }
+        }
     }
-    
-
 }
