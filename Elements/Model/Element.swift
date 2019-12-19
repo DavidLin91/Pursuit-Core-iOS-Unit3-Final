@@ -11,7 +11,7 @@ import Foundation
 struct AllElements: Codable {
     let name: String
     let symbol: String
-    let atomic_mass: Double
+    let atomic_mass: Double?
     let number: Int
     let density: Double?
     let melt: Double?

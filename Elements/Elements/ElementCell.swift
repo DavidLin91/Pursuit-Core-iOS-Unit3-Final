@@ -16,7 +16,7 @@ class ElementCell: UITableViewCell {
     
     func configureCell(element: AllElements) {
         elementNameLabel.text = element.name
-        elementSymbolWeightLabel.text = "\(element.symbol)(\(element.number)) \(element.atomic_mass)"
+        elementSymbolWeightLabel.text = "\(element.symbol)(\(element.number)) \(element.atomic_mass?.description ?? "N/A")"
         
 //        elementImage.getImage(with: element., completion: <#T##(Result<UIImage, AppError>) -> ()#>)
 //

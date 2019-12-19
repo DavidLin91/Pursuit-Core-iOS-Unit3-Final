@@ -48,7 +48,7 @@ static func getElements(completion: @escaping(Result<[AllElements], AppError>)->
             completion(.failure(.badURL(endpointURLString)))
             return
         }
-        // convert PostedQuestion to Data
+        // convert favorite button pressed to data
         do {
             let data = try JSONEncoder().encode(favorite)
             
@@ -81,6 +81,29 @@ static func getElements(completion: @escaping(Result<[AllElements], AppError>)->
     }
 
     
+    // GET request: to get all favorites
+    static func fetchFavorites(completion: @escaping(Result<[AllElements],AppError>) -> ()) {
+        let answersURLString = "http://5c1d79abbc26950013fbcaa9.mockapi.io/api/v1/favorites"
+        guard let url = URL(string: answersURLString) else {
+            completion(.failure(.badURL(answersURLString)))
+            return
+        }
+        
+        let request = URLRequest(url: url)
+        NetworkHelper.shared.performDataTask(with: request) {(result) in
+            switch result {
+            case .failure(let appError):
+                completion(.failure(.networkClientError(appError)))
+            case .success(let data):
+                do {
+                    let answers = try JSONDecoder().decode([AllElements].self, from: data)
+                    completion(.success(answers))
+                } catch {
+                    completion(.failure(.decodingError(error)))
+                }
+            }
+        }
+    }
     
     
     

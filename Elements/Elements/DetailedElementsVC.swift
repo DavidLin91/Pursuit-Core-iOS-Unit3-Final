@@ -41,7 +41,7 @@ class DetailedElementsVC: UIViewController {
         elementSymbol.text = elementsDetail?.symbol
         elementNumber.text = elementsDetail?.number.description
         elementName.text = elementsDetail?.name
-        elementMass.text = elementsDetail?.atomic_mass.description
+        elementMass.text = elementsDetail?.atomic_mass?.description
         meltingPoint.text = "Melting Point: \(elementsDetail?.melt?.description ?? "N/A")"
         boilingPoint.text = "Boiling Point: \(elementsDetail?.boil?.description ?? "N/A")"
         discoveredBy.text = "Discovered By: \(elementsDetail?.discovered_by ?? "N/A")"
