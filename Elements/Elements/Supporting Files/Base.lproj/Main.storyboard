@@ -234,11 +234,22 @@
                                 <rect key="frame" x="0.0" y="89" width="414" height="805.5"/>
                                 <color key="tintColor" red="0.90229089340000002" green="0.90229089340000002" blue="0.90229089340000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
-                            <view alpha="0.20000000000000001" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITZ-rP-lor" userLabel="AlphaView">
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITZ-rP-lor" userLabel="AlphaView">
                                 <rect key="frame" x="0.0" y="82" width="414" height="808"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aO-zo-ZbY">
+                                <rect key="frame" x="250" y="463" width="94.5" height="22"/>
+                                <color key="backgroundColor" red="0.90229089340000002" green="0.90229089340000002" blue="0.90229089340000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Favorite  " image="heart" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="favoriteButtonPressed:" destination="Xuy-fd-Vpu" eventType="touchUpInside" id="QCf-vs-ekG"/>
+                                </connections>
+                            </button>
                             <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDx-fj-Dq2" userLabel="elementCellView">
                                 <rect key="frame" x="69.5" y="173" width="275" height="275"/>
                                 <subviews>
@@ -265,7 +276,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.90229089340000002" green="0.90229089340000002" blue="0.90229089340000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="V6t-vC-MUy" firstAttribute="top" secondItem="Khx-Ts-WYD" secondAttribute="bottom" constant="8" id="2R7-jR-Xez"/>
                                     <constraint firstAttribute="trailing" secondItem="Pcx-za-wQ4" secondAttribute="trailing" constant="10" id="3gS-1f-FzG"/>
@@ -302,7 +313,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.90229089340000002" green="0.90229089340000002" blue="0.90229089340000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="39Q-5A-8xi"/>
                                     <constraint firstItem="ieC-sB-x29" firstAttribute="leading" secondItem="3Gp-Qu-928" secondAttribute="leading" constant="10" id="9o2-Lq-UbW"/>
@@ -317,16 +328,6 @@
                                     <constraint firstItem="wdC-PI-AKG" firstAttribute="top" secondItem="0gZ-RZ-Pxh" secondAttribute="bottom" constant="8" id="yPW-No-awP"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aO-zo-ZbY">
-                                <rect key="frame" x="289.5" y="463" width="55" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Favorite">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="favoriteButtonPressed:" destination="Xuy-fd-Vpu" eventType="touchUpInside" id="QCf-vs-ekG"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
