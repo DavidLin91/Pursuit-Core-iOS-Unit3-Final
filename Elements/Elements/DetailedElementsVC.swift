@@ -15,10 +15,9 @@ class DetailedElementsVC: UIViewController {
     @IBOutlet weak var elementNumber: UILabel!
     @IBOutlet weak var elementName: UILabel!
     @IBOutlet weak var elementMass: UILabel!
-    
-    
-    
-    
+    @IBOutlet weak var meltingPoint: UILabel!
+    @IBOutlet weak var boilingPoint: UILabel!
+    @IBOutlet weak var discoveredBy: UILabel!
     
     
     override func viewDidLoad() {
@@ -33,6 +32,10 @@ class DetailedElementsVC: UIViewController {
         elementNumber.text = elementsDetail?.number.description
         elementName.text = elementsDetail?.name
         elementMass.text = elementsDetail?.atomic_mass.description
+        meltingPoint.text = "Melting Point: \(elementsDetail?.melt?.description ?? "N/A")"
+        boilingPoint.text = "Boiling Point: \(elementsDetail?.boil?.description ?? "N/A")"
+        discoveredBy.text = "Discovered By: \(elementsDetail?.discovered_by ?? "N/A")"
     }
+    
     
 }
