@@ -18,6 +18,16 @@ class DetailedElementsVC: UIViewController {
     @IBOutlet weak var meltingPoint: UILabel!
     @IBOutlet weak var boilingPoint: UILabel!
     @IBOutlet weak var discoveredBy: UILabel!
+    @IBOutlet weak var elementCellView: UIView!
+    @IBOutlet weak var detailedView: UIView!
+    @IBOutlet weak var favoriteButton: UIButton!
+    
+    
+    override func viewDidLayoutSubviews() {
+        elementCellView.layer.cornerRadius = 10
+        detailedView.layer.cornerRadius = 10
+        favoriteButton.layer.cornerRadius = 10
+    }
     
     
     override func viewDidLoad() {
@@ -36,6 +46,35 @@ class DetailedElementsVC: UIViewController {
         boilingPoint.text = "Boiling Point: \(elementsDetail?.boil?.description ?? "N/A")"
         discoveredBy.text = "Discovered By: \(elementsDetail?.discovered_by ?? "N/A")"
     }
+    
+    
+    
+    @IBAction func favoriteButtonPressed(_ sender: UIButton) {
+        guard let element = elementsDetail else {
+            return
+        }
+        
+        let favorite = AllElements(name: element.name, symbol: element.symbol, atomic_mass: element.atomic_mass, number: element.number, density: element.density, melt: element.melt, boil: element.boil, discovered_by: element.discovered_by, favoritedBy: "David")
+        
+        ElementsAPIClient.postFavorites(favorite: favorite) { (result) in
+            DispatchQueue.main.async {
+                sender.isEnabled = true
+            }
+            switch result {
+            case .failure(let appError):
+                DispatchQueue.main.async {
+                self.showAlert(title: "Error posting favorite", message: "\(appError)")
+                }
+            case .success:
+                DispatchQueue.main.async {
+                    self.showAlert(title: "Success", message: "\(element.name) was favorited") { action in
+                        self.dismiss(animated: true)
+                    }
+                }
+            }
+        }
+    }
+    
     
     
 }
