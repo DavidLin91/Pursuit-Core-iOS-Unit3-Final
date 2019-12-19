@@ -14,11 +14,12 @@
 		5734756C21DA90C800FB6177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5734756A21DA90C800FB6177 /* LaunchScreen.storyboard */; };
 		63DE9CCF23ABCCE30032A666 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE9CCE23ABCCE30032A666 /* FavoritesVC.swift */; };
 		63DE9CD523ABCF400032A666 /* ElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE9CD423ABCF400032A666 /* ElementCell.swift */; };
-		63DE9CD723ABD06C0032A666 /* DetailedElementsVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE9CD623ABD06C0032A666 /* DetailedElementsVCViewController.swift */; };
+		63DE9CD723ABD06C0032A666 /* DetailedElementsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE9CD623ABD06C0032A666 /* DetailedElementsVC.swift */; };
 		63DE9CD923ABD1080032A666 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE9CD823ABD1080032A666 /* Element.swift */; };
 		63DE9CDB23ABD2F50032A666 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE9CDA23ABD2F50032A666 /* NetworkHelper.swift */; };
 		63DE9CDD23ABD35F0032A666 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE9CDC23ABD35F0032A666 /* AppError.swift */; };
 		63DE9CE023ABD42A0032A666 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE9CDF23ABD42A0032A666 /* UIImageView+Extensions.swift */; };
+		63DE9CE223ABD7D20032A666 /* ElementsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE9CE123ABD7D20032A666 /* ElementsAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +32,12 @@
 		5734756D21DA90C800FB6177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63DE9CCE23ABCCE30032A666 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		63DE9CD423ABCF400032A666 /* ElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCell.swift; sourceTree = "<group>"; };
-		63DE9CD623ABD06C0032A666 /* DetailedElementsVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedElementsVCViewController.swift; sourceTree = "<group>"; };
+		63DE9CD623ABD06C0032A666 /* DetailedElementsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedElementsVC.swift; sourceTree = "<group>"; };
 		63DE9CD823ABD1080032A666 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 		63DE9CDA23ABD2F50032A666 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		63DE9CDC23ABD35F0032A666 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		63DE9CDF23ABD42A0032A666 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		63DE9CE123ABD7D20032A666 /* ElementsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,7 @@
 			children = (
 				5734756321DA90C700FB6177 /* ElementsVC.swift */,
 				63DE9CD423ABCF400032A666 /* ElementCell.swift */,
-				63DE9CD623ABD06C0032A666 /* DetailedElementsVCViewController.swift */,
+				63DE9CD623ABD06C0032A666 /* DetailedElementsVC.swift */,
 				63DE9CCE23ABCCE30032A666 /* FavoritesVC.swift */,
 				5734757321DA90F500FB6177 /* Supporting Files */,
 				5734756D21DA90C800FB6177 /* Info.plist */,
@@ -96,6 +98,7 @@
 		63DE9CD023ABCCFF0032A666 /* API Client */ = {
 			isa = PBXGroup;
 			children = (
+				63DE9CE123ABD7D20032A666 /* ElementsAPIClient.swift */,
 			);
 			path = "API Client";
 			sourceTree = "<group>";
@@ -200,11 +203,12 @@
 				5734756421DA90C700FB6177 /* ElementsVC.swift in Sources */,
 				5734756221DA90C700FB6177 /* AppDelegate.swift in Sources */,
 				63DE9CE023ABD42A0032A666 /* UIImageView+Extensions.swift in Sources */,
+				63DE9CE223ABD7D20032A666 /* ElementsAPIClient.swift in Sources */,
 				63DE9CD923ABD1080032A666 /* Element.swift in Sources */,
 				63DE9CDD23ABD35F0032A666 /* AppError.swift in Sources */,
 				63DE9CD523ABCF400032A666 /* ElementCell.swift in Sources */,
 				63DE9CCF23ABCCE30032A666 /* FavoritesVC.swift in Sources */,
-				63DE9CD723ABD06C0032A666 /* DetailedElementsVCViewController.swift in Sources */,
+				63DE9CD723ABD06C0032A666 /* DetailedElementsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

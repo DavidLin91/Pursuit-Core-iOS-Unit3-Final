@@ -22,9 +22,29 @@ class ElementsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        tableView.dataSource = self
+        tableView.delegate = self
+        loadData()
     }
     
+    func loadData() {
+        ElementsAPIClient.getElements { (result) in
+            switch result {
+            case .failure(let appError):
+                print("app error: \(appError)")
+            case .success(let data):
+                self.elements = data
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let elementDVC = segue.destination as? DetailedElementsVC,
+            let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("could not segue to DetailedElementsVC")
+        }
+        let element = elements[indexPath.row]
+        elementDVC.elementsDetail = element
+    }
     
 }
 
