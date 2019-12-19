@@ -68,6 +68,7 @@ class DetailedElementsVC: UIViewController {
     
     
     @IBAction func favoriteButtonPressed(_ sender: UIButton) {
+        favoriteButton.isHidden = true
         guard let element = elementsDetail else {
             return
         }
@@ -87,10 +88,12 @@ class DetailedElementsVC: UIViewController {
                 DispatchQueue.main.async {
                     self.showAlert(title: "Success", message: "\(element.name) was favorited") { action in
                         self.dismiss(animated: true)
+
                     }
                 }
             }
         }
+
     }
     
     
