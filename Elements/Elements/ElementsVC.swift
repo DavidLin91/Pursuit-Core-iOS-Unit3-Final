@@ -9,12 +9,35 @@
 import UIKit
 
 class ElementsVC: UIViewController {
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-  }
-
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    private var elements = [AllElements]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    
 }
 
+extension ElementsVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        elements.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "elementCell", for: indexPath) as? ElementCell else {
+            fatalError("Could not dequeue to ElementCell")
+        }
+        let element = elements[indexPath.row]
+        return cell
+    }
+    
+    
+}
